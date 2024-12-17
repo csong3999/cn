@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Ultra - 产品详情</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product-detail.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#products">产品</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-detail-main">
+        <!-- 产品展示区 -->
+        <section class="product-showcase">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="assets/images/COOL1.jpg" alt="Cool Ultra 主图" id="mainImage">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="assets/images/COOL1.jpg" alt="Cool Ultra 白色" class="active" data-color="white">
+                    <img src="assets/images/COOL2.jpg" alt="Cool Ultra 黑色" data-color="black">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <div class="product-header">
+                    <h1>Cool Ultra</h1>
+                    <p class="product-subtitle">无线蓝牙主动降噪耳机</p>
+                </div>
+                <div class="product-price">
+                    <div class="price-info">
+                        <span class="price">¥159</span>
+                        <span class="feature-tag">主动降噪</span>
+                    </div>
+                </div>
+                
+                <div class="product-colors">
+                    <h3>颜色</h3>
+                    <div class="color-options">
+                        <button class="color-btn" data-color="black" data-image="COOL2.jpg" style="background-color: #000;">
+                            <span class="color-name">黑色</span>
+                        </button>
+                        <button class="color-btn active" data-color="white" data-image="COOL1.jpg" style="background-color: #fff; border: 1px solid #ddd;">
+                            <span class="color-name">白色</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-features">
+                    <h3>产品特点</h3>
+                    <ul>
+                        <li>主动/通透降噪双模式，智能调节环境音</li>
+                        <li>LED触控显示屏，操作更直观</li>
+                        <li>持久续航，单次充电可持续使用8小时</li>
+                        <li>高清通话，双麦克风降噪</li>
+                        <li>智能触控操作，轻松控制</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品详情区 -->
+        <section class="product-details">
+            <div class="details-nav">
+                <button class="detail-tab" data-tab="features">产品特性</button>
+                <button class="detail-tab active" data-tab="specs">规格参数</button>
+            </div>
+
+            <div class="detail-content">
+                <div class="detail-panel" id="features">
+                    <div class="feature-images">
+                        <img src="assets/images/XQ01.jpg" alt="产品详情图1" class="feature-image">
+                        <img src="assets/images/XQ02.jpg" alt="产品详情图2" class="feature-image">
+                        <img src="assets/images/XQ03.jpg" alt="产品详情图3" class="feature-image">
+                        <img src="assets/images/XQ04.jpg" alt="产品详情图4" class="feature-image">
+                        <img src="assets/images/XQ05.jpg" alt="产品详情图5" class="feature-image">
+                        <img src="assets/images/XQ06.jpg" alt="产品详情图6" class="feature-image">
+                        <img src="assets/images/XQ07.jpg" alt="产品详情图7" class="feature-image">
+                        <img src="assets/images/XQ08.jpg" alt="产品��情图8" class="feature-image">
+                        <img src="assets/images/XQ09.jpg" alt="产品详情图9" class="feature-image">
+                        <img src="assets/images/XQ10.jpg" alt="产品详情图10" class="feature-image">
+                        <img src="assets/images/XQ11.jpg" alt="产品详情图11" class="feature-image">
+                        <img src="assets/images/XQ12.jpg" alt="产品详情图12" class="feature-image">
+                        <img src="assets/images/XQ13.jpg" alt="产品详情图13" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="detail-panel active" id="specs">
+                    <div class="specs-list">
+                        <ul>
+                            <li><strong>蓝牙版本：</strong> 5.4</li>
+                            <li><strong>续航时间：</strong> 最长8小时</li>
+                            <li><strong>充电时间：</strong> 1.5小时</li>
+                            <li><strong>防水等级：</strong> IPX4</li>
+                            <li><strong>重量：</strong> 62g</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/product-detail.js"></script>
+</body>
+</html> 

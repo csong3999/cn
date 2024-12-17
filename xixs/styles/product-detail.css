@@ -1,0 +1,449 @@
+/* 产品详情页主要样式 */
+.product-detail-main {
+    padding-top: 80px;
+    background: #fff;
+}
+
+/* 产品展示区样式 */
+.product-showcase {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    gap: 6rem;
+    background: #fff;
+}
+
+/* 图片展示区 */
+.product-gallery {
+    flex: 1;
+    max-width: 700px;
+}
+
+.main-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+.thumbnail-list {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.thumbnail-list img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.thumbnail-list img.active {
+    opacity: 1;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+/* 产品信息区整体样式 */
+.product-info {
+    flex: 1;
+    max-width: 500px;
+    padding: 2rem 0 0 6rem; /* 增加左侧间距 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 标题区域 */
+.product-header {
+    margin-bottom: 3rem;
+}
+
+.product-header h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.product-subtitle {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* 价格区域 */
+.product-price {
+    margin-bottom: 4rem;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.price {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+/* 添加特性标签样式 */
+.feature-tag {
+    background: #000;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 标签悬停效果 */
+.feature-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.feature-tag:hover::before {
+    left: 100%;
+}
+
+/* 移除原价和优惠标签相关样式 */
+.original-price,
+.discount-tag {
+    display: none;
+}
+
+/* 颜色选择区域 */
+.product-colors {
+    margin-bottom: 4rem;
+    text-align: left;
+    padding-left: 0; /* 移除任何额外的内边距 */
+}
+
+.product-colors h3 {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: left;
+}
+
+.color-options {
+    display: flex;
+    gap: 2.5rem;
+    margin-left: 0; /* 确保完全左对齐 */
+}
+
+.color-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.color-btn.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px #000;
+}
+
+.color-btn[data-color="white"] {
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.color-name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 产品特点区域 */
+.product-features {
+    margin-top: 2rem;
+    text-align: left;
+    padding-left: 0; /* 移除任何额外的内边距 */
+}
+
+.product-features h3 {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: left;
+}
+
+.product-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.product-features li {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    padding-left: 1.2rem; /* 减小缩进 */
+    position: relative;
+    text-align: left;
+}
+
+.product-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 4px;
+    height: 4px;
+    background: #000;
+    border-radius: 50%;
+}
+
+/* 确保所有文本左对齐 */
+.product-info > * {
+    text-align: left;
+}
+
+/* 移除购买按钮区域 */
+.purchase-options {
+    display: none;
+}
+
+/* 产品详情区域样式优化 */
+.product-details {
+    max-width: 1400px;
+    margin: 6rem auto 0; /* 增加顶部间距 */
+    padding: 3rem 2rem;
+    background: #fff;
+}
+
+.details-nav {
+    display: flex;
+    gap: 4rem; /* 增加标签之间的间距 */
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    justify-content: center; /* 居中显示标签 */
+}
+
+.detail-tab {
+    padding: 1.5rem 2rem;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.detail-tab:hover {
+    color: #000;
+}
+
+.detail-tab.active {
+    color: #000;
+    font-weight: 500;
+}
+
+.detail-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+/* 详情内容区域 */
+.detail-content {
+    max-width: 1200px; /* 增加最大宽度 */
+    margin: 0 auto;
+}
+
+.detail-panel {
+    display: none;
+    padding: 0; /* 移除内边距以便图片完整显示 */
+}
+
+.detail-panel.active {
+    display: block;
+}
+
+/* 规格参数样式 */
+.specs-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.specs-list li {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem 2rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.specs-list li strong {
+    color: #000;
+    min-width: 100px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .product-details {
+        margin-top: 4rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .details-nav {
+        gap: 2rem;
+    }
+
+    .detail-tab {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .specs-list ul {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .specs-list li {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 3rem;
+    }
+    
+    .feature-tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+} 
+
+/* 产品特性图片展示样式 */
+.feature-images {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* 移除图片间距 */
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0; /* 初始设置为透明 */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 调整内容区域样式 */
+.detail-content {
+    max-width: 1200px; /* 增加最大宽度 */
+    margin: 0 auto;
+}
+
+.detail-panel {
+    display: none;
+    padding: 0; /* 移除内边距以便图片完整显示 */
+}
+
+.detail-panel.active {
+    display: block;
+} 
+
+/* 修改导航链接颜色 */
+.nav-links a {
+    color: #000; /* 改为黑色 */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000; /* 下划线也改为黑色 */
+    transition: width 0.3s ease;
+}
+
+/* 滚动时的导航栏样式 */
+.navbar.scrolled .nav-links a {
+    color: #000; /* 滚动时也保持黑色 */
+}
+
+/* 悬停效果 */
+.nav-links a:hover {
+    color: #000; /* 悬停时保持黑色 */
+} 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X9 - 产品详情</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product-detail.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#products">产品</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-detail-main">
+        <!-- 产品展示区 -->
+        <section class="product-showcase">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="assets/images/X9-1.jpg" alt="X9 主图" id="mainImage">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="assets/images/X9-1.jpg" alt="X9 白橙" class="active" data-color="white-orange">
+                    <img src="assets/images/X9-2.jpg" alt="X9 经典黑红" data-color="black-red">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <div class="product-header">
+                    <h1>X9</h1>
+                    <p class="product-subtitle">骨传导运动蓝牙耳机</p>
+                </div>
+                <div class="product-price">
+                    <div class="price-info">
+                        <span class="price">¥299</span>
+                        <span class="feature-tag">IPX8防水</span>
+                    </div>
+                </div>
+                
+                <div class="product-colors">
+                    <h3>颜色</h3>
+                    <div class="color-options">
+                        <button class="color-btn active" data-color="white-orange" data-image="X9-1.jpg" style="background: linear-gradient(45deg, #fff, #ff6b00); border: 1px solid #ddd;">
+                            <span class="color-name">白橙</span>
+                        </button>
+                        <button class="color-btn" data-color="black-red" data-image="X9-2.jpg" style="background: linear-gradient(45deg, #000, #ff0000);">
+                            <span class="color-name">经典黑红</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-features">
+                    <h3>产品特点</h3>
+                    <ul>
+                        <li>蓝牙/MP3双模式，运动更自由</li>
+                        <li>IPX8级防水，畅享运动乐趣</li>
+                        <li>持久续航，单次充电可持续使用8小时</li>
+                        <li>智能触控操作，轻松控制</li>
+                        <li>高清通话，双麦降噪</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品详情区 -->
+        <section class="product-details">
+            <div class="details-nav">
+                <button class="detail-tab" data-tab="features">产品特性</button>
+                <button class="detail-tab active" data-tab="specs">规格参数</button>
+            </div>
+
+            <div class="detail-content">
+                <div class="detail-panel" id="features">
+                    <div class="feature-images">
+                        <img src="assets/images/XQX902.jpg" alt="X9产品详情图02" class="feature-image">
+                        <img src="assets/images/XQX903.jpg" alt="X9产品详情图03" class="feature-image">
+                        <img src="assets/images/XQX904.jpg" alt="X9产品详情图04" class="feature-image">
+                        <img src="assets/images/XQX905.jpg" alt="X9产品详情图05" class="feature-image">
+                        <img src="assets/images/XQX906.jpg" alt="X9产品详情图06" class="feature-image">
+                        <img src="assets/images/XQX907.jpg" alt="X9产品详情图07" class="feature-image">
+                        <img src="assets/images/XQX908.jpg" alt="X9产品详情图08" class="feature-image">
+                        <img src="assets/images/XQX909.jpg" alt="X9产品详情图09" class="feature-image">
+                        <img src="assets/images/XQX910.jpg" alt="X9产品详情图10" class="feature-image">
+                        <img src="assets/images/XQX911.jpg" alt="X9产品详情图11" class="feature-image">
+                        <img src="assets/images/XQX912.jpg" alt="X9产品详情图12" class="feature-image">
+                        <img src="assets/images/XQX913.jpg" alt="X9产品详情图13" class="feature-image">
+                        <img src="assets/images/XQX914.jpg" alt="X9产品详情图14" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="detail-panel active" id="specs">
+                    <div class="specs-list">
+                        <ul>
+                            <li><strong>蓝牙版本：</strong> 5.4</li>
+                            <li><strong>续航时间：</strong> 最长8小时</li>
+                            <li><strong>充电时间：</strong> 1.5小时</li>
+                            <li><strong>防水等级：</strong> IPX8</li>
+                            <li><strong>重量：</strong> 38g</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/product-detail.js"></script>
+</body>
+</html> 
